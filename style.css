@@ -6,6 +6,10 @@
   background-color: black;
 }
 
+/*.navigation_bar{
+  border-color: white;  
+}*/
+
 .navigation_bar li{
   display: inline;
   margin: 30px;
