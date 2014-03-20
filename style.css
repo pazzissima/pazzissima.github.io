@@ -1,0 +1,31 @@
+.navigation_bar ul{
+  list-style-type:none;
+  margin:0;
+  padding:20px;
+  text-align: center;
+  background-color: black;
+}
+
+.navigation_bar li{
+  display: inline;
+  margin: 30px;
+}
+
+.navigation_bar ul li a { 
+  text-decoration: none; 
+  padding: .2em 1em; 
+  color: white; 
+  background-color: #000; 
+  font-size: 16px;
+  } 
+
+.profile_picture{
+  float: right;
+  padding:20px;
+}
+
+body{
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
