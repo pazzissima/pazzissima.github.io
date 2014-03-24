@@ -6,10 +6,6 @@
   background-color: black;
 }
 
-/*.navigation_bar{
-  border-color: white;  
-}*/
-
 .navigation_bar li{
   display: inline;
   margin: 30px;
@@ -33,3 +29,16 @@ body{
   color: white;
   padding: 20px;
 }
+
+.content{
+  color: white;
+  background: -webkit-linear-gradient(bottom, rgba(36,48,255,1), rgba(36,48,255,.1));
+/*  background: -moz-linear-gradient(bottom, rgba(0,10,10,1), rgba(0,10,10,.1));*/
+  padding: 10px;
+  line-height: 20px;
+  margin: auto;
+  border-radius: 5px;
+  width: 90%;
+  left: 10%;
+}
+
