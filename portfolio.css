@@ -1,8 +1,31 @@
 body{
   background-image: url('files/ushwf-background.jpg');
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
+  background-size: 100% 180%;
+/*  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
 }
+
+.navigation_bar ul{
+  list-style-type:none;
+  margin:0;
+  padding:20px;
+  text-align: center;
+  background-color: black;
+}
+
+.navigation_bar li{
+  display: inline;
+  margin: 30px;
+}
+
+.navigation_bar ul li a { 
+  text-decoration: none; 
+  padding: .2em 1em; 
+  color: white; 
+  background-color: #000; 
+  font-size: 16px;
+  } 
+
