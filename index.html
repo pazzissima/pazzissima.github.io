@@ -3,8 +3,8 @@
 <head>
   <link rel="stylesheet" style="text/css" href="bootstrap.min.css">
   <link rel="stylesheet" style="text/css" href="style.css">
-  <script src="js/app.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools.js"></script>
 </head>
 <body>
@@ -36,5 +36,18 @@
       </div> <!-- end about_me_text -->
   </div> <!-- end about_me -->
 </div> <!-- content -->
+
+
+<script>
+  window.addEvent('domready', function(){
+    $$('li').each(function(li){
+      li.addEvent('mouseenter', function(){
+        li.tween('padding-left', 20);
+      }).addEvent('mouseleave', function(){
+        li.tween('padding-left', 0);
+      })
+    })
+  })
+</script>
 </body>
 </html>
