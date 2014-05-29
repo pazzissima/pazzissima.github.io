@@ -5,7 +5,8 @@
   <link rel="stylesheet" style="text/css" href="style.css">
   <script src="/js/app.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript"></script>
 </head>
 <body>
 
@@ -28,26 +29,35 @@
   <div class="about_me">
     <a name="about"></a>
       <div class='about_me_text'>
-      <h3>About Me</h3>
-      <p>I have recently changed the direction of my career path from Web Marketing and Analytics to Web Development. After graduating from the web development immersive program, I am ready for my first job as a Junior Web Developer.</p>
-      <p>I am equally interested in back-end engineering (Ruby, Ruby on Rails) and front-end (HTML, CSS, JavaScript, jQuery, Angular.js) and have used all these technologies in my 3 projects.</p>
-      <p>In addition to my coding skills, I also have 6 years of experience in Web Marketing, SEO, Web Analytics, Product Management and Forecasting. I have worked in both large companies and small startups, within teams of various sizes, and have a broad perspective on the world of business.</p>
-      <p>Outside of work I spend time dancing Argentine Tango. I also enjoy mountain hiking, swimming and cross-country skiing.
+
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="100" width="350">
+        <text x="350" y="70" font-family="sans-serif" font-size="20px" stroke="#FFFFFF" fill="#FFFFFF">About me</text>
+        </svg>
+
+
+        <p>I have recently changed the direction of my career path from Web Marketing and Analytics to Web Development. After graduating from the web development immersive program, I am ready for my first job as a Junior Web Developer.</p>
+        <p>I am equally interested in back-end engineering (Ruby, Ruby on Rails) and front-end (HTML, CSS, JavaScript, jQuery, Angular.js) and have used all these technologies in my 3 projects.</p>
+        <p>In addition to my coding skills, I also have 6 years of experience in Web Marketing, SEO, Web Analytics, Product Management and Forecasting. I have worked in both large companies and small startups, within teams of various sizes, and have a broad perspective on the world of business.</p>
+        <p>Outside of work I spend time dancing Argentine Tango. I also enjoy mountain hiking, swimming and cross-country skiing.
       </div> <!-- end about_me_text -->
   </div> <!-- end about_me -->
-</div> <!-- content -->
+  </div> <!-- content -->
 
 
-<script>
-  window.addEvent('domready', function(){
-    $$('li').each(function(li){
-      li.addEvent('mouseenter', function(){
-        li.tween('padding-left', 20);
-      }).addEvent('mouseleave', function(){
-        li.tween('padding-left', 0);
-      })
-    })
-  })
-</script>
+  <script>
+    d3.selectAll("text")
+      .data([10,70])
+      .transition()
+      .duration(3000)
+      .attr("x", function(d){return d})
+    d3.selectAll("text")
+      .transition()
+      .delay(3000)
+      .duration(2000)
+      .style("fill", "violet")
+      .style("stroke", "violet")
+  </script>
 </body>
 </html>
