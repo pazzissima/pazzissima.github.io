@@ -17,7 +17,10 @@
   color: white; 
   background-color: #000; 
   font-size: 16px;
-  } 
+  }
+.navigation_bar ul li a:hover{
+  color: #DA70D6;
+}
 
 .profile_picture{
   float: right;
