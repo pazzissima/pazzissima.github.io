@@ -63,13 +63,13 @@
       .style("stroke", "violet")
 
 
-      $('svg').one('mouseover', function(){
+      $('.about_me').one('mouseover', function(){
         console.log('touch!')
         $('.move_text').animate({ 
           marginLeft: "+60px",
         }, 500 );  
 
-        $('svg').mouseout(function(){
+        $('.about_me').mouseout(function(){
           $('.move_text').animate({ 
           marginLeft: "0px",
         }, 500 ); 
