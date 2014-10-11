@@ -17,9 +17,11 @@
   color: white; 
   background-color: #000; 
   font-size: 16px;
+  display: inline;
   }
 .navigation_bar ul li a:hover{
-  color: #DA70D6;
+  font-weight: bold;
+  border: 1px dotted white;
 }
 
 .profile_picture{
@@ -45,4 +47,11 @@ body{
   left: 10%;
   float: left;
 }
-
+@media (max-width: 600px) {
+  .navigation_bar li {
+    margin: 30px 5px;
+  }
+  .navigation_bar ul li a{
+    padding: .2em 0.5em; 
+  }
+}
