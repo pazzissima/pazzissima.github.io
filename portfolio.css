@@ -90,3 +90,8 @@ a[title]:hover:after {
     width: 50%;
   }
 }
+
+.portfolio ol li img {
+  width: 150px;
+  height: 100px;
+}
