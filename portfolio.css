@@ -33,7 +33,7 @@ body{
 } 
 
 p{
-  margin: 0 30% 20px 0;
+  margin: 0 54% 20px 0;
   border-style:solid;
   border-width: 1px;
   border-radius: 5px;
@@ -93,5 +93,8 @@ a[title]:hover:after {
 
 .portfolio ol li img {
   width: 150px;
-  height: 100px;
+  height: 96px;
+  float: right; 
+  margin:0 70px 0 20px;
+  margin-right: 6%;
 }
