@@ -3,7 +3,7 @@
 <head>
   <meta name="description" content="Sofya Nagaslaeva's Website">
   <link rel="stylesheet" style="text/css" href="bootstrap.min.css">
-  <link rel="stylesheet" style="text/css" href="style.css">
+<!--   <link rel="stylesheet" style="text/css" href="style.css"> -->
   <link rel="shortcut icon" type="image/x-icon" href="files/icon.ico" />
   <script src="js/app.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -12,8 +12,168 @@
     <script type="text/javascript"></script>
 </head>
 <body>
+ <style>
+  .profilePic{
+    position: relative;
+    top: 122px;
+    text-align: center;
+  }
 
-  <div class="navigation_bar">
+  /*==DROPDOWN styles==*/
+.boysDropdown .caret {
+    margin-left: 4px;
+    margin-top: 4px;
+    } 
+
+/*.boysDropdown .hp-btnImage {
+    display: inline-block;
+    background: rgb(237,237,237);
+    padding: 8px 5px 7px 10px;
+    margin: 0;
+    border: 2px solid rgb(0,9,49);
+    color: rgb(0,9,49);
+    font-weight: 500;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+    position: relative;
+    z-index:12;
+}*/
+
+.boysDropdown ul{
+    padding:0;
+    margin:0;
+    transition-property: all;
+    transition-duration: 0.5s;
+    height:0px;
+    position:absolute;
+    top:27px;
+    z-index:9;
+    overflow:hidden;
+}
+.boysDropdown ul li a{
+    text-decoration: none;
+    color: rgb(0,9,49);
+}
+
+.boysDropdown ul li a:hover, .boysDropdown ul li a:active{
+    color:#ffffff;
+    background:#ef4135;
+}
+
+.boysDropdown .list a{
+    display: block;
+    background: rgb(237,237,237);
+/*    padding: 7px 5px 5px 9px;*/
+    margin: 0;
+    border: none;
+    color: rgb(0,9,49);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.boysDropdown{
+    position:relative;
+    z-index: 10;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;  
+}
+.boysDropdown:hover ul, .boysDropdown .hover_effect ul, .boysDropdown:active ul{
+    display:block;
+    height:340px;
+}
+.dropdownWidth{
+    width: 213px;
+}
+.dropdownWidth li{
+  
+}
+/*.dropdownPosition{
+  left: 311px;
+  top: 220px;
+}*/
+  #navBlock nav{
+    width: auto;
+    text-align: center;
+    border-bottom: 1px solid rgba(224,224,224,0);
+    border-top: 1px solid rgba(224,224,224,0);
+    margin: 0;
+    padding: 28px 0;
+    position: relative;
+    margin-top: 100px;
+  }
+
+  nav ul{
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+  }
+  #navBlock nav ul li{
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+  }
+
+/*  .main-nav ul{
+  list-style-type:none;
+  margin:0;
+  padding:20px;
+  text-align: center;
+}
+
+.main-nav li{
+  display: inline;
+  margin: 30px;
+}*/
+ </style>
+
+  <div class='profilePic'>
+    <img src="files/Sofya.jpg" id="my_pic" height="300" title="Sofya Nagaslaeva" alt="Sofya Nagaslaeva">
+  </div>
+
+  <div id="navBlock" role="navigation">
+    <nav class="main-nav" data-content-field="navigation">
+      <ul>
+        <li>
+          <a href="/">About</a>
+        </li>
+
+        <li>
+          <div class="boysDropdown dropdownPosition">
+            <a class="hp-btnImage dropdownWidth" href="/">Web Developer</a>
+            <ul>
+              <div class="dropdownWidth">
+                  <li class="list"><a href="files/Resume.pdf" onClick="return wcdLib.contentItemLinkWithFacet(this,'','EBB_BabyGiftShop_2_Baby');" alt="gifts by stage" style="margin-top: 4px">Resume <span class="gfol-caret"></span></a></li>
+                  <li class="list"><a href="portfolio.html" onClick="return wcdLib.contentItemLinkWithFacet(this,'','EBB_BabyGiftShop_3_Baby');" alt="portfolio"/>Portfolio <span class="gfol-caret"></span></a></li>
+                  <li class="list"> <a href="https://github.com/pazzissima" onClick="return wcdLib.contentItemLinkWithFacet(this,'','EBB_BabyGiftShop_4_Baby');" alt="github"/>Github <span class="gfol-caret"></span></a></li>
+                  <li class="list"> <a href="http://linkedin.com/in/sofianagaslaeva/" onClick="return wcdLib.contentItemLinkWithFacet(this,'','EBB_BabyGiftShop_5_Baby');" alt="gifts by gender"/>LinkedIn <span class="gfol-caret"></span></a></li>
+                </div>
+              </ul>
+            </div>
+        </li>
+
+        <li>
+          <a href="/">Tango Dancer</a>
+        </li>
+
+        <li>
+          <a href="/">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- <div class="navigation_bar">
     <ul>
     <li><a href="">About Me</a></li>
     <li><a href="portfolio.html">Portfolio</a></li>
@@ -21,9 +181,9 @@
     <li><a href="https://github.com/pazzissima">Github</a></li>
     <li><a href="http://linkedin.com/in/sofianagaslaeva/">LinkedIn</a></li>
     </ul>  
-  </div>
+  </div> -->
 
-  <hr/>
+  <!-- <hr/>
   <div class="content">
   <div class='profile_picture'>
     <img src="files/Sofya.jpg" id="my_pic" height="300" title="Sofya Nagaslaeva" alt="Sofya Nagaslaeva">
@@ -38,13 +198,13 @@
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="100" width="350">
         <text x="350" y="70" font-family="sans-serif" font-size="20px" stroke="#FFFFFF" fill="#FFFFFF">About me</text>
         </svg>
-        </div>
+        </div> -->
 
-
-        Scratch that.
-      </div> <!-- end about_me_text -->
-  </div> <!-- end about_me -->
-  </div> <!-- content -->
+<!-- 
+        Scratch that. -->
+  <!--     </div>  --><!-- end about_me_text -->
+ <!--  </div>  --><!-- end about_me -->
+  <!-- </div>  -->
 
 
   <script>
