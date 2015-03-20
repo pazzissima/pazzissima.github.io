@@ -6,138 +6,89 @@
 <!--   <link rel="stylesheet" style="text/css" href="style.css"> -->
   <link rel="shortcut icon" type="image/x-icon" href="files/icon.ico" />
   <script src="js/app.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<!--   // <script src="js/bootstrap.min.js"></script> -->
   <script src="http://d3js.org/d3.v3.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
     <script type="text/javascript"></script>
 </head>
 <body>
  <style>
+ body{
+  height: 2000px;
+ }
  .construction{
   text-align: center;
  }
   .profilePic{
-    position: relative;
-    top: 122px;
-    text-align: center;
+    position: absolute;
+    top: 40px;
+    margin: 0 39%;
+    height: 428px;
   }
 
-  /*==DROPDOWN styles==*/
-.boysDropdown .caret {
-    margin-left: 4px;
-    margin-top: 4px;
-    } 
-
-/*.boysDropdown .hp-btnImage {
-    display: inline-block;
-    background: rgb(237,237,237);
-    padding: 8px 5px 7px 10px;
-    margin: 0;
-    border: 2px solid rgb(0,9,49);
-    color: rgb(0,9,49);
-    font-weight: 500;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 12px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: left;
-    position: relative;
-    z-index:12;
-}*/
-
-.boysDropdown ul{
-    padding:0;
-    margin:0;
-    transition-property: all;
-    transition-duration: 0.5s;
-    height:0px;
-    position:absolute;
-    top:27px;
-    z-index:9;
-    overflow:hidden;
-}
-.boysDropdown ul li a{
-    text-decoration: none;
-    color: rgb(0,9,49);
-}
-
-.boysDropdown ul li a:hover, .boysDropdown ul li a:active{
-    color:#ffffff;
-    background:#ef4135;
-}
-
-.boysDropdown .list a{
-    display: block;
-    background: rgb(237,237,237);
-/*    padding: 7px 5px 5px 9px;*/
-    margin: 0;
-    border: none;
-    color: rgb(0,9,49);
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.boysDropdown{
-    position:relative;
-    z-index: 10;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;  
-}
-.boysDropdown:hover ul, .boysDropdown .hover_effect ul, .boysDropdown:active ul{
-    display:block;
-    height:340px;
-}
-.dropdownWidth{
-    width: 213px;
-}
-.dropdownWidth li{
-  
-}
-/*.dropdownPosition{
-  left: 311px;
-  top: 220px;
-}*/
-  #navBlock nav{
-    width: auto;
-    text-align: center;
-    border-bottom: 1px solid rgba(224,224,224,0);
-    border-top: 1px solid rgba(224,224,224,0);
-    margin: 0;
-    padding: 28px 0;
-    position: relative;
-    margin-top: 100px;
-  }
-
-  nav ul{
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-    padding: 0;
-  }
-  #navBlock nav ul li{
-    display: inline-block;
-    text-align: center;
-    margin: 0 20px;
-  }
-
-/*  .main-nav ul{
-  list-style-type:none;
-  margin:0;
-  padding:20px;
-  text-align: center;
-}
-
-.main-nav li{
+/*DROPDOWN styles*/
+ul {
+  position: absolute;
+  text-align: left;
   display: inline;
-  margin: 30px;
-}*/
+  margin: 12px 35%;
+  padding: 8px 4px 5px 0;
+  list-style: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  top: 350px;
+/*  position: fixed;*/
+}
+ul li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 17px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+ul li:hover {
+  background: #555;
+  color: #fff;
+}
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 35px;
+/*  top: 48px;*/
+  left: -43px;
+  width: 100px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+ul li ul li { 
+  background: #555; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+ul li ul li:hover { background: #666; }
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
  </style>
   <div class="construction">
     The website is under re-construction. Stay tuned!
@@ -147,7 +98,7 @@
     <img src="files/Sofya.jpg" id="my_pic" height="300" title="Sofya Nagaslaeva" alt="Sofya Nagaslaeva">
   </div>
 
-  <div id="navBlock" role="navigation">
+ <!--  <div id="navBlock" role="navigation">
     <nav class="main-nav" data-content-field="navigation">
       <ul>
         <li>
@@ -165,6 +116,7 @@
                   <li class="list"> <a href="http://linkedin.com/in/sofianagaslaeva/" onClick="return wcdLib.contentItemLinkWithFacet(this,'','EBB_BabyGiftShop_5_Baby');" alt="gifts by gender"/>LinkedIn <span class="gfol-caret"></span></a></li>
                 </div>
               </ul>
+
             </div>
         </li>
 
@@ -177,42 +129,22 @@
         </li>
       </ul>
     </nav>
-  </div>
-
-  <!-- <div class="navigation_bar">
-    <ul>
-    <li><a href="">About Me</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="files/Resume.pdf">Resume</a></li>
-    <li><a href="https://github.com/pazzissima">Github</a></li>
-    <li><a href="http://linkedin.com/in/sofianagaslaeva/">LinkedIn</a></li>
-    </ul>  
   </div> -->
-
-  <!-- <hr/>
-  <div class="content">
-  <div class='profile_picture'>
-    <img src="files/Sofya.jpg" id="my_pic" height="300" title="Sofya Nagaslaeva" alt="Sofya Nagaslaeva">
-  </div>
-
-  <div class="about_me">
-    <a name="about"></a>
-      <div class='about_me_text'>
-
-
-        <div class="move_text">
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="100" width="350">
-        <text x="350" y="70" font-family="sans-serif" font-size="20px" stroke="#FFFFFF" fill="#FFFFFF">About me</text>
-        </svg>
-        </div> -->
-
-<!-- 
-        Scratch that. -->
-  <!--     </div>  --><!-- end about_me_text -->
- <!--  </div>  --><!-- end about_me -->
-  <!-- </div>  -->
-
-
+<ul>
+  <li>About</li>
+  <li>
+    Web Developer
+    <ul>
+      <li><a href="files/Resume.pdf">Resume</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="https://github.com/pazzissima">Github</a></li>
+      <li><a href="http://linkedin.com/in/sofianagaslaeva/">LinkedIn</a></li>
+    </ul>
+  </li>
+  <li>Tango Dancer</li>
+  <li>Contact</li>
+</ul>
+  
   <script>
   //d3 animation
     d3.selectAll("text")
