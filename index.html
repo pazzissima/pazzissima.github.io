@@ -16,15 +16,21 @@
  body{
   height: 2000px;
  }
+ .topTop {
+  height: 450px;
+ }
  .construction{
   text-align: center;
  }
-  .profilePic{
-    position: absolute;
-    top: 40px;
-    margin: 0 39%;
-    height: 428px;
-  }
+.profilePic{
+  position: absolute;
+  top: 40px;
+  margin: 0 39%;
+  height: 428px;
+}
+.rest{
+  text-align: center;
+}
 
 /*DROPDOWN styles*/
 ul {
@@ -93,7 +99,75 @@ ul li:hover ul {
 /*@media (min-width: 1288) {
 
 }*/
+#sliderContainer {
+  width:828px;
+  height:784px;
+  overflow:hidden; 
+  margin:0 auto;
+}
+#sliderImage {
+  width:1764px;
+}
+#sliderImage img {
+  padding:0;
+  margin:0;
+  float:left;
+  height: 350px;
+  width: 276px; 
+}
+.arrowClicker {
+  position: absolute;
+  width:828px;
+  top: -68px;
+}
  </style>
+
+ <script type="text/javascript">
+
+  jQuery(function($) {
+
+  function carousel(){
+     $( "#sliderImage" ).animate({
+        left: "-552",
+        }, 3000, function() {
+          var firstImg=$("#sliderImage img").first();
+        $("#sliderImage").append(firstImg);
+        $("#sliderImage").css("left","-276px");
+       });
+    }; 
+
+    interval=setInterval(carousel,3000);
+
+    $("#arrowR").click(function(){
+      clearInterval(interval);
+      $( "#sliderImage" ).animate({
+          left: "-552",
+          }, 3000, function() {
+            var firstImg=$("#sliderImage img").first();
+          $("#sliderImage").append(firstImg);
+          $("#sliderImage").css("left","-276px");
+         });
+
+    });
+
+    $("#arrowL").click(function(){
+      clearInterval(interval);
+      $( "#sliderImage" ).animate({
+          left: "0",
+          }, 3000, function() {
+            var lastImg=$("#sliderImage img").last();
+          $("#sliderImage").prepend(lastImg);
+          $("#sliderImage").css("left","-276px");
+         });
+
+    });
+
+
+  });
+</script>
+
+
+ <div class="topTop">
   <div class="construction">
     The website is under re-construction. Stay tuned!
   </div>
@@ -102,38 +176,7 @@ ul li:hover ul {
     <img src="files/Sofya.jpg" id="my_pic" height="300" title="Sofya Nagaslaeva" alt="Sofya Nagaslaeva">
   </div>
 
- <!--  <div id="navBlock" role="navigation">
-    <nav class="main-nav" data-content-field="navigation">
-      <ul>
-        <li>
-          <a href="/">About</a>
-        </li>
 
-        <li>
-          <div class="boysDropdown dropdownPosition">
-            <a class="hp-btnImage dropdownWidth" href="/">Web Developer</a>
-            <ul>
-              <div class="dropdownWidth">
-                  <li class="list"><a href="files/Resume.pdf" onClick="return wcdLib.contentItemLinkWithFacet(this,'','EBB_BabyGiftShop_2_Baby');" alt="gifts by stage" style="margin-top: 4px">Resume <span class="gfol-caret"></span></a></li>
-                  <li class="list"><a href="portfolio.html" onClick="return wcdLib.contentItemLinkWithFacet(this,'','EBB_BabyGiftShop_3_Baby');" alt="portfolio"/>Portfolio <span class="gfol-caret"></span></a></li>
-                  <li class="list"> <a href="https://github.com/pazzissima" onClick="return wcdLib.contentItemLinkWithFacet(this,'','EBB_BabyGiftShop_4_Baby');" alt="github"/>Github <span class="gfol-caret"></span></a></li>
-                  <li class="list"> <a href="http://linkedin.com/in/sofianagaslaeva/" onClick="return wcdLib.contentItemLinkWithFacet(this,'','EBB_BabyGiftShop_5_Baby');" alt="gifts by gender"/>LinkedIn <span class="gfol-caret"></span></a></li>
-                </div>
-              </ul>
-
-            </div>
-        </li>
-
-        <li>
-          <a href="/">Tango Dancer</a>
-        </li>
-
-        <li>
-          <a href="/">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </div> -->
 <ul>
   <li><a href="#">About</a></li>
   <li>
@@ -148,6 +191,34 @@ ul li:hover ul {
   <li>Tango Dancer</li>
   <li>Contact</li>
 </ul>
+</div> <!-- Toptop -->
+
+<div class="rest">
+  <div>
+    Hi!
+  </div>
+
+  <div id="sliderContainer" style="position:relative;">
+    <div id="sliderImage" style="position:absolute;left:-276px;">
+      <img src="files/c6.jpg"/>
+      <img src="files/c7.jpg" alt="Sofya Nagaslaeva"/>
+      <img src="files/c8.jpg" alt="Sonya Nagaslaeva"/>
+      <img src="files/c9.jpg" alt="Sofya Nagaslaeva"/>
+      <img src="files/c10.jpg" alt="Sofya Nagaslaeva"/>
+    </div>
+
+    <div class='arrowClicker'>
+      <div id="arrowR" style="position:absolute;top:200px;right:0px;"><img src="files/rightArrow.png"/></div>
+      <div id="arrowL" style="position:absolute;top:200px;left:0px;"><img src="files/leftArrow.png"/></div>
+    </div> 
+    
+  </div>  <!-- sliderContainer -->
+
+
+
+</div>  <!-- rest -->
+
+
   
   <script>
   //d3 animation
