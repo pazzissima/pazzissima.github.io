@@ -143,7 +143,7 @@ ul li:hover ul {
       clearInterval(interval);
       $( "#sliderImage" ).animate({
           left: "-552",
-          }, 5000, function() {
+          }, 100, function() {
             var firstImg=$("#sliderImage img").first();
           $("#sliderImage").append(firstImg);
           $("#sliderImage").css("left","-276px");
@@ -155,7 +155,7 @@ ul li:hover ul {
       clearInterval(interval);
       $( "#sliderImage" ).animate({
           left: "0",
-          }, 5000, function() {
+          }, 100, function() {
             var lastImg=$("#sliderImage img").last();
           $("#sliderImage").prepend(lastImg);
           $("#sliderImage").css("left","-276px");
