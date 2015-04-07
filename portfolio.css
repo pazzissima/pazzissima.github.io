@@ -98,3 +98,19 @@ a[title]:hover:after {
   margin:0 70px 0 20px;
   margin-right: 6%;
 }
+
+
+.portfolio figure img, p{
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.portfolio figure:hover img, p:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+p:hover{
+  margin-left: 70px;
+  margin-top: 20px;
+}
