@@ -144,6 +144,7 @@ ul li:hover ul {
 
     interval=setInterval(carousel,3000);
 
+if ( jQuery('#arrowR').length > 0) {
     $("#arrowR").click(function(){
       clearInterval(interval);
       $( "#sliderImage" ).animate({
@@ -155,7 +156,9 @@ ul li:hover ul {
          });
 
     });
+  }
 
+if ( jQuery('#arrowR').length > 0) {
     $("#arrowL").click(function(){
       clearInterval(interval);
       $( "#sliderImage" ).animate({
@@ -167,6 +170,7 @@ ul li:hover ul {
          });
 
     });
+  }
 
 
   });
