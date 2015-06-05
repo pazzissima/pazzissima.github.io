@@ -100,17 +100,17 @@ a[title]:hover:after {
 }
 
 
-.portfolio figure img, p{
+.portfolio figure img{
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
-.portfolio figure:hover img, p:hover {
+.portfolio figure:hover img {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
-p:hover{
+/*p:hover{
   margin-left: 70px;
   margin-top: 20px;
-}
+}*/
