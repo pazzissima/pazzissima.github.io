@@ -11,12 +11,7 @@
 
  <style>
  body{
-  height: 500px;
-  background: url('files/wallpaper5.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background-color: #C3D7DF;
  }
  .topTop {
   height: 314px;
@@ -48,7 +43,7 @@ ul {
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   top: 350px;
-  width: 515px;
+  width: 506px;
 }
 ul li {
   font: bold 15px sans-serif;
@@ -56,7 +51,7 @@ ul li {
   margin-right: -4px;
   position: relative;
   padding: 15px 25px;
-  background: #fff;
+  background: #3A0256;
   cursor: pointer;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -64,7 +59,7 @@ ul li {
   -o-transition: all 0.2s;
   transition: all 0.2s;
   z-index: 600;
-  color: black;
+  color: #ffffff;
 }
 ul li:hover {
   background: rgb(75,0,130);
@@ -73,7 +68,7 @@ ul li:hover {
 ul li ul {
   padding: 0;
   position: absolute;
-  top: 48px;
+  top: 47px;
 /*  top: 48px;*/
   left: 0%;
   width: 154px;
@@ -123,10 +118,10 @@ ul li:hover ul {
     height: 368px;
   }
   ul {
-    margin: 12px 23%;
+    margin: 12px auto;
   }
   ul li ul {
-    left: -23%;
+    top: 35px;
   }
  
 }
@@ -172,6 +167,7 @@ ul li:hover ul {
       padding:0;
       display:block;
       float:left;
+      background-color: #C3D7DF;
   }
 
   .my-responsive-carousel__indicators img {
@@ -285,7 +281,7 @@ function WcdCarousel(obj,offInd,onInd) {
   this.timerSet = false;
   this.autoAdv = (obj.attr('autoAdvance')=='true') ? true : false;
   this.showInd = (obj.attr('showIndicators')=='true') ? true : false;
-  this.offInd = (offInd) ? offInd : 'http://www2.assets-gap.com/Asset_Archive/GPWeb/content/skava/assets/off.png';
+  this.offInd = (offInd) ? offInd : 'files/doc-gray-circle.png';
   this.onInd = (onInd) ? onInd : 'http://www2.assets-gap.com/Asset_Archive/GPWeb/content/skava/assets/on.png';
 }
 
