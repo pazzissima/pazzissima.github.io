@@ -2,16 +2,13 @@
 <html>
 <head>
   <meta name="description" content="Sofya Nagaslaeva's Website">
-  <link rel="stylesheet" style="text/css" href="bootstrap.min.css">
-<!--   <link rel="stylesheet" style="text/css" href="style.css"> -->
   <link rel="shortcut icon" type="image/x-icon" href="files/icon.ico" />
   <script src="js/app.js"></script>
-<!--   // <script src="js/bootstrap.min.js"></script> -->
   <script src="http://d3js.org/d3.v3.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
     <script type="text/javascript"></script>
 </head>
-<body>
+
  <style>
  body{
   height: 500px;
@@ -104,30 +101,7 @@ ul li:hover ul {
   opacity: 1;
   visibility: visible;
 }
-/*@media (min-width: 1288) {
 
-}*/
-#sliderContainer {
-  width:828px;
-  height:784px;
-  overflow:hidden; 
-  margin:0 auto;
-}
-#sliderImage {
-  width:1764px;
-}
-#sliderImage img {
-  padding:0;
-  margin:0;
-  float:left;
-  height: 350px;
-  width: 276px; 
-}
-.arrowClicker {
-  position: absolute;
-  width:828px;
-  top: -68px;
-}
 @font-face {
     font-family: myFirstFont;
     src: url(CookieMonster.ttf);
@@ -158,55 +132,62 @@ ul li:hover ul {
 }
  </style>
 
- <script type="text/javascript">
 
-  jQuery(function($) {
-
-  function carousel(){
-     $( "#sliderImage" ).animate({
-        left: "-552",
-        }, 5000, function() {
-          var firstImg=$("#sliderImage img").first();
-        $("#sliderImage").append(firstImg);
-        $("#sliderImage").css("left","-276px");
-       });
-    }; 
-
-    interval=setInterval(carousel,3000);
-
-if ( jQuery('#arrowR').length > 0) {
-    $("#arrowR").click(function(){
-      clearInterval(interval);
-      $( "#sliderImage" ).animate({
-          left: "-552",
-          }, 100, function() {
-            var firstImg=$("#sliderImage img").first();
-          $("#sliderImage").append(firstImg);
-          $("#sliderImage").css("left","-276px");
-         });
-
-    });
+<style>
+.my-responsive-carousel__wrapper {
+      width:100%;
+      max-width:600px;
+      margin:10px auto;
+/*      display:none;*/
   }
 
-if ( jQuery('#arrowR').length > 0) {
-    $("#arrowL").click(function(){
-      clearInterval(interval);
-      $( "#sliderImage" ).animate({
-          left: "0",
-          }, 100, function() {
-            var lastImg=$("#sliderImage img").last();
-          $("#sliderImage").prepend(lastImg);
-          $("#sliderImage").css("left","-276px");
-         });
-
-    });
+  .my-responsive-carousel__wrapper img {
+      max-width:400px;
+      width:100%;
   }
 
+  .my-responsive-carousel__view {
+      width:100%;
+      overflow:hidden;
+  }
 
-  });
-</script>
+  .my-responsive-carousel__items div {
+      float:left;
+  }
 
+  .my-responsive-carousel__indicators {
+      margin:5px auto 0px auto;
+      text-align:center;
+  }
 
+  .my-responsive-carousel__indicators ul {
+      list-style-type: none;
+      margin:0;
+      padding:0;
+      border:0;
+  }
+
+  .my-responsive-carousel__indicators ul li {
+      margin:0;
+      padding:0;
+      display:block;
+      float:left;
+  }
+
+  .my-responsive-carousel__indicators img {
+      float:left;
+      width:15px;
+      margin-right:6px;
+  }
+
+  .my-responsive-carousel__items ul {
+      -webkit-transition-timing-function: cubic-bezier(.44,.03,.58,1);
+      transition-timing-function: cubic-bezier(.44,.03,.58,1);
+  }
+
+</style>
+
+<body>
  <div class="topTop">
   <div class="construction">
     The website is under re-construction. Stay tuned!
@@ -238,71 +219,258 @@ if ( jQuery('#arrowR').length > 0) {
 </div> <!-- Toptop -->
 
 <div class="rest">
-  <div>
-    Hi!
+
+  <div class="my-responsive-carousel__wrapper" autoAdvance="true" showIndicators="true" advanceSpeed="7000">
+      <div class="my-responsive-carousel__view">
+          <div class="my-responsive-carousel__items">
+              <div>
+                  <img src="files/c6.jpg" />
+              </div>
+              <div>
+                  <img src="files/c7.jpg" />
+              </div>
+              <div>
+                  <img src="files/c8.jpg" />
+              </div>
+          </div>
+      </div>
+      <div class="my-responsive-carousel__indicators"><ul></ul></div><div style="clear:both"></div>
   </div>
-
-<!--   <div id="sliderContainer" style="position:relative;">
-    <div id="sliderImage" style="position:absolute;left:-276px;">
-      <img src="files/c6.jpg"/>
-      <img src="files/c7.jpg" alt="Sofya Nagaslaeva"/>
-      <img src="files/c8.jpg" alt="Sonya Nagaslaeva"/>
-      <img src="files/c9.jpg" alt="Sofya Nagaslaeva"/>
-      <img src="files/c10.jpg" alt="Sofya Nagaslaeva"/>
-    </div>
-
-    <div class='arrowClicker'>
-      <div id="arrowR" style="position:absolute;top:200px;right:0px;"><img src="files/rightArrow.png"/></div>
-      <div id="arrowL" style="position:absolute;top:200px;left:0px;"><img src="files/leftArrow.png"/></div>
-    </div> 
-    
-  </div>  --> <!-- sliderContainer -->
-
 
 
 </div>  <!-- rest -->
 
 
   
-  <script>
-  //d3 animation
-    d3.selectAll("text")
-      .data([10,70])
-      .transition()
-      .duration(3000)
-      .attr("x", function(d){return d})
-    d3.selectAll("text")
-      .transition()
-      .delay(3000)
-      .duration(2000)
-      .style("fill", "violet")
-      .style("stroke", "violet")
-
-
-      $('.about_me').one('mouseover', function(){
-        console.log('touch!')
-        $('.move_text').animate({ 
-          marginLeft: "+60px",
-        }, 500 );  
-
-        $('.about_me').mouseout(function(){
-          $('.move_text').animate({ 
-          marginLeft: "0px",
-        }, 500 ); 
-        })
-      });
+<script>
 
 //awesome title
-      msg = "Sofya Nagaslaeva is the best programmer in the world";
+    msg = "Sofya Nagaslaeva is the best programmer in the world";
 
-      msg = "..." + msg;pos = 0;
-      function scrollMSG() {
-      document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
-      pos++;
-      if (pos >  msg.length) pos = 0
-      window.setTimeout("scrollMSG()",200);
+    msg = "..." + msg;pos = 0;
+    function scrollMSG() {
+    document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+    pos++;
+    if (pos >  msg.length) pos = 0
+    window.setTimeout("scrollMSG()",200);
+    }
+    scrollMSG();
+</script>
+
+
+<!-- RESPONSIVE CAROUSEL -->
+<script>
+
+function wcdResponsiveCarousel(offInd,onInd) {
+  jQuery('.my-responsive-carousel__wrapper').each(function(){ 
+    var thisCarousel = new WcdCarousel(jQuery(this),offInd,onInd);
+    thisCarousel.getCurrentDimensions(false);
+    thisCarousel.setDimensions(false);
+    if (thisCarousel.showInd) {
+      thisCarousel.addIndicators();
+    }
+    thisCarousel.addEventListeners();
+  });
+}
+
+function WcdCarousel(obj,offInd,onInd) {
+  this.wrapper = obj;
+  this.currentSlide = 1;
+  this.carouselItems = this.wrapper.find('.my-responsive-carousel__items');
+  this.carouselLength = this.carouselItems.children().length;
+  this.isTwoSlides = (this.carouselLength==2) ? true : false;
+  this.hasInitialized = false;
+  this.indicatorDiv = this.wrapper.find('.my-responsive-carousel__indicators');
+  this.timer = "";
+  this.timerSet = false;
+  this.autoAdv = (obj.attr('autoAdvance')=='true') ? true : false;
+  this.showInd = (obj.attr('showIndicators')=='true') ? true : false;
+  this.offInd = (offInd) ? offInd : 'http://www2.assets-gap.com/Asset_Archive/GPWeb/content/skava/assets/off.png';
+  this.onInd = (onInd) ? onInd : 'http://www2.assets-gap.com/Asset_Archive/GPWeb/content/skava/assets/on.png';
+}
+
+WcdCarousel.prototype = {
+  constructor : WcdCarousel,
+  getCurrentDimensions : function(isOrientationChange) {
+    this.carouselWidth = (jQuery(window).width()>600) ? 600 : jQuery(window).width();
+    this.resetPosition = this.createTranslateString(this.carouselWidth * -1);
+    this.nextPosition = this.createTranslateString(this.carouselWidth * -2);
+    this.previousPosition = this.createTranslateString(0);
+  },
+  setDimensions : function(isOrientationChange) {
+    if (this.isTwoSlides) {
+      this.carouselItems.css({'width':this.carouselWidth * 4 + "px"});
+    }
+    else {
+      this.carouselItems.css({'width':(this.carouselWidth * this.carouselLength) + "px"});
+    }
+    this.carouselItems.children('div').css({'width':this.carouselWidth + "px"});
+    if (!this.hasInitialized) {
+        this.hasInitialized = true;
+        if (this.isTwoSlides) {
+            this.carouselItems.children('div').clone().appendTo(this.carouselItems);
+        }
+        this.wrapper.show();
+        this.repositionSlides(false);
+    }
+    if (isOrientationChange) {
+        this.translateCarousel(this.resetPosition,'0ms');
+    }
+    if (this.autoAdv) {
+        this.setAutoAdvance();
+    }
+  },
+  setAutoAdvance : function() {
+    var $this = this;
+    if (!this.timerSet) {
+      this.timer = setInterval(function() {
+        $this.advanceCarousel(300,true,true);
+      },3000);
+      this.timerSet = true;
+    }
+  },
+  repositionSlides : function(isNext) {
+    if (isNext) {
+      this.carouselItems.children().last().after(this.carouselItems.children().first());
+    }
+    else {
+      this.carouselItems.children().first().before(this.carouselItems.children().last());
+    }
+    this.translateCarousel(this.resetPosition,'0ms');
+  },
+  translateCarousel : function(translateString,translateTime) {
+    this.carouselItems.css({
+      'transform': translateString,
+      '-webkit-transform': translateString,
+      '-webkit-transition-duration':translateTime,
+      'transition-duration':translateTime
+    });
+  },
+  advanceCarousel : function(translateTime,isNext,isAuto) {
+    var $this = this;
+    var translateString = (isNext) ? this.nextPosition : this.previousPosition;
+    this.translateCarousel(translateString,translateTime + 'ms');
+    setTimeout(function() { 
+      $this.repositionSlides(isNext);
+      if ($this.autoAdv && !isAuto) {
+          $this.setAutoAdvance();
       }
-      scrollMSG();
-  </script>
+    },translateTime);
+    if (this.showInd) {
+        (isNext) ? this.currentSlide++ : this.currentSlide--;
+        if (this.currentSlide<1) {
+            this.currentSlide = this.carouselLength;
+        }
+        else if (this.currentSlide>this.carouselLength) {
+            this.currentSlide = 1;
+        }
+        var curInd = this.indicatorDiv.find('li:nth-child(' + this.currentSlide + ') img');
+        curInd.attr('src',this.onInd);
+        this.indicatorDiv.find('li img').not(curInd).attr('src',this.offInd);
+    }
+  },
+  addIndicators : function() {
+    for (i=0;i<this.carouselLength;i++) {
+      var imgToAdd = (i==0) ? "<img src ='" + this.onInd + "' />" : "<img src ='" + this.offInd + "' />";
+      var htmlToAdd = "<li>" + imgToAdd + "</li>";
+      this.indicatorDiv.children('ul:first-child').append(htmlToAdd);
+    } //end for
+    var indicatorDivWidth = 21 * this.carouselLength + "px";
+    this.indicatorDiv.css({'width':indicatorDivWidth});
+  },
+  addEventListeners : function() {
+    var $this = this;
+    var startX,startY,startTime,startPos,deltaX,deltaY,currentPos;
+    var threshold = this.carouselWidth / 3.5;
+    var carouselView = this.wrapper.children('div.my-responsive-carousel__view');
+    
+    carouselView.on('touchstart',function(event) { 
+        var e = event.originalEvent;
+        startTime = new Date().getTime();
+        if ($this.autoAdv) {
+            clearInterval($this.timer);
+            $this.timerSet = false;
+        }
+        startPos = $this.parseMatrix($this.carouselItems.css('-webkit-transform'));
+        startX = Math.round(e.changedTouches[0].clientX);
+        startY = Math.round(e.changedTouches[0].clientY);
+        deltaX = 0;
+        deltaY = 0;
+        $this.carouselItems.css({
+            'transition-duration':'0ms',
+            '-webkit-transition-duration':'0ms'
+        });
+    });
+    
+    carouselView.on('touchmove',function(event) { 
+        var e = event.originalEvent;
+        deltaX = Math.round(e.changedTouches[0].clientX) - startX;
+        deltaY = Math.abs(e.changedTouches[0].clientY - startY);
+        if (Math.abs(deltaY) < 8) {
+          event.preventDefault();
+        }
+        if (Math.abs(deltaY) / Math.abs(deltaX)<1) {
+          var tempPos = startPos + deltaX;
+          if (tempPos>=($this.carouselWidth * -2) && tempPos<=0) {
+            currentPos = tempPos;
+            var newTranslate = $this.createTranslateString(currentPos);
+            $this.carouselItems.css({
+              'transform' : newTranslate,
+              '-webkit-transform' : newTranslate
+            });
+          }
+        }
+    });
+
+    carouselView.on('touchend',function(event){
+        if (deltaX>threshold) {
+            var translateTime = Math.abs(0 - currentPos) + 150;
+            $this.advanceCarousel(translateTime,false);
+        }
+        else if (deltaX<threshold * -1) {
+            var translateTime = Math.abs(currentPos - ($this.carouselWidth * -2)) + 150;
+            $this.advanceCarousel(translateTime,true);
+        }
+        else if (Math.abs(deltaX)<1 && Math.abs(deltaY)<1) {
+            jQuery(document).trigger('wcdResponsiveCarousel:click');
+        }
+        else {
+            var translateTime = Math.abs(currentPos - startPos) + 150 + 'ms';
+            $this.translateCarousel($this.resetPosition,translateTime);
+        }
+    });
+    jQuery(window).on('orientationchange',function() {
+        if ($this.autoAdv) {
+            clearInterval($this.timer);
+            $this.timerSet = false;
+        }
+        $this.getCurrentDimensions(true);
+    });
+  },
+  createTranslateString : function(value) {
+    var translateString = "translate3d(" + value + "px,0px,0px)";
+    return translateString;
+  },
+  parseMatrix : function(translateMatrix) {
+    var matrixString = translateMatrix.substr(translateMatrix.indexOf('(') + 1,(translateMatrix.indexOf(')') - 1) - translateMatrix.indexOf('('));
+    var matrixArray = matrixString.split(',');
+    var translateXValue = parseInt(matrixArray[4]);
+    return translateXValue;
+  }
+};
+
+
+jQuery(document).ready(function() { 
+  wcdResponsiveCarousel();
+});
+
+
+
+
+</script>
+
+
+
+
 </body>
 </html>
