@@ -125,6 +125,28 @@ ul li:hover ul {
   }
  
 }
+.smll_menu {
+  display: none;
+}
+@media (max-width: 786px) {
+  .lrge_menu {
+    display: none;
+  }
+  .smll_menu {
+    display: block;
+    width: 62%;
+  }
+  ul li ul {
+    width: 100%;
+    left: -1px;
+  }
+  ul li {
+    display: block;
+    border: 1px white solid;
+    margin-right: -2px;
+  }
+ 
+}
  </style>
 
 
@@ -198,7 +220,7 @@ ul li:hover ul {
   </div>
 
 
-<ul>
+<ul class="lrge_menu">
   <a href="#"><li>About</li></a>
   <li>
     Web Developer
@@ -212,6 +234,19 @@ ul li:hover ul {
   <a href="tango.html"><li>Tango Dancer</li></a>
   <a href="contact.html"><li>Contact</li></a>
 </ul>
+
+<ul class="smll_menu">
+  <li>
+    Web Developer
+    <ul>
+      <a href="files/Resume.pdf"><li>Resume</li></a>
+      <a href="portfolio.html"><li>Portfolio</li></a>
+      <a href="https://github.com/pazzissima"><li>Github</li></a>
+      <a href="http://linkedin.com/in/sofianagaslaeva/"><li>LinkedIn</li></a>
+    </ul>
+  </li>
+</ul>
+
 </div> <!-- Toptop -->
 
 <div class="rest">
