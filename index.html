@@ -3,7 +3,10 @@
 <head>
   <meta name="description" content="Sofya Nagaslaeva's Website">
   <link rel="shortcut icon" type="image/x-icon" href="files/icon.ico" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+
   <script src="js/app.js"></script>
+  
   <script src="http://d3js.org/d3.v3.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
     <script type="text/javascript"></script>
@@ -147,63 +150,15 @@ ul li:hover ul {
   }
  
 }
+
+.owl-carousel .owl-item{
+
+}
+
  </style>
 
 
-<style>
-.my-responsive-carousel__wrapper {
-      width:100%;
-      max-width:600px;
-      margin:10px auto;
-/*      display:none;*/
-  }
 
-  .my-responsive-carousel__wrapper img {
-      max-width:600px;
-      width:100%;
-  }
-
-  .my-responsive-carousel__view {
-      width:100%;
-      overflow:hidden;
-  }
-
-  .my-responsive-carousel__items div {
-      float:left;
-  }
-
-  .my-responsive-carousel__indicators {
-      margin:5px auto 0px auto;
-      text-align:center;
-  }
-
-  .my-responsive-carousel__indicators ul {
-      list-style-type: none;
-      margin:0;
-      padding:0;
-      border:0;
-  }
-
-  .my-responsive-carousel__indicators ul li {
-      margin:0;
-      padding:0;
-      display:block;
-      float:left;
-      background-color: #C3D7DF;
-  }
-
-  .my-responsive-carousel__indicators img {
-      float:left;
-      width:15px;
-      margin-right:6px;
-  }
-
-  .my-responsive-carousel__items ul {
-      -webkit-transition-timing-function: cubic-bezier(.44,.03,.58,1);
-      transition-timing-function: cubic-bezier(.44,.03,.58,1);
-  }
-
-</style>
 
 <body>
  <div class="topTop">
@@ -245,7 +200,7 @@ ul li:hover ul {
 
 <div class="rest">
 
-  <div class="my-responsive-carousel__wrapper" autoAdvance="true" showIndicators="true" advanceSpeed="7000">
+  <!-- <div class="my-responsive-carousel__wrapper" autoAdvance="true" showIndicators="true" advanceSpeed="7000">
       <div class="my-responsive-carousel__view">
           <div class="my-responsive-carousel__items">
               <div>
@@ -260,14 +215,36 @@ ul li:hover ul {
           </div>
       </div>
       <div class="my-responsive-carousel__indicators"><ul></ul></div><div style="clear:both"></div>
+  </div> -->
+  <div class="owl-carousel owl-theme">
+    <div> <img src="files/c14.jpg" /> </div>
+    <div> <img src="files/c12.jpg" /> </div>
+    <div> <img src="files/c13.jpg" /> </div>
+    <div> <img src="files/c15.jpg" /> </div>
+    <div> <img src="files/c11.jpg" /> </div>
+    <div> <img src="files/c16.jpg" /> </div>
+    <div> <img src="files/c17.jpg" /> </div>
   </div>
-
 
 </div>  <!-- rest -->
 
 
   
 <script>
+// Carousel
+jQuery(document).ready(function(){
+  jQuery('.owl-carousel').owlCarousel({
+    items: 3,
+    navigation: true,
+    navigationText: [
+      "<i class='icon-chevron-left icon-white'><</i>",
+      "<i class='icon-chevron-right icon-white'>></i>"
+      ],
+    lazyLoad: true,
+    loop: true,
+    margin: 10
+  });
+});
 
 //awesome title
     msg = "Sofya Nagaslaeva. Front-end development: HTML, CSS, JavaScript.";
@@ -496,6 +473,7 @@ jQuery(document).ready(function() {
 
 
 
-
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
 </body>
 </html>
