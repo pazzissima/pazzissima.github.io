@@ -3,7 +3,8 @@
 <head>
   <meta name="description" content="Sofya Nagaslaeva's Website">
   <link rel="shortcut icon" type="image/x-icon" href="files/icon.ico" />
-  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link href="css/owl.carousel.css" rel="stylesheet">
+  <link href="css/owl.theme.css" rel="stylesheet" >
 
   <script src="js/app.js"></script>
   
@@ -249,6 +250,8 @@ jQuery(document).ready(function(){
     loop: true,
     margin: 20
   });
+
+  jQuery('.owl-stage-outer').insertAfter('.owl-controls');
 });
 
 //awesome title
@@ -263,8 +266,6 @@ jQuery(document).ready(function(){
     }
     scrollMSG();
 </script>
-
-
 
 
   <script src="js/owl.carousel.js"></script>
