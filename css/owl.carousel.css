@@ -90,6 +90,9 @@
 }
 .owl-carousel.owl-loaded {
   display: block;
+  background-color: #3A0256;
+  padding-bottom: 30px;
+  padding-top: 10px;
 }
 .owl-carousel.owl-loading {
   opacity: 0;
