@@ -3,8 +3,10 @@
 <head>
   <meta name="description" content="Sofya Nagaslaeva's Website">
   <link rel="shortcut icon" type="image/x-icon" href="files/icon.ico" />
+  <link rel="stylesheet" style="text/css" href="css/cat.css">
   <link href="css/owl.carousel.css" rel="stylesheet">
   <link href="css/owl.theme.css" rel="stylesheet" >
+  
 
   <script src="js/app.js"></script>
   
@@ -176,12 +178,13 @@ ul li:hover ul {
   max-width: 620px;
   margin: 0 auto;
 }
+
  </style>
 
 
 
 
-<body>
+<body onload="myFunction()">
  <div class="topTop">
   <!-- <div class="construction">
     The website is under re-construction. Stay tuned!
@@ -229,6 +232,27 @@ ul li:hover ul {
     </picture>
   </div>
 
+  <div id="cat">
+    <div class="loader">
+      <div class="track">
+        <div class="mouse"></div>
+      </div>
+      <div class="face">
+        <div class="ears-container"></div>
+        <div class="eyes-container">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+        <div class="phiz">
+          <div class="nose"></div>
+          <div class="lip"></div>
+          <div class="mouth"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="owl-carousel owl-theme">
     <div> <img src="files/c14.jpg" /> </div>
     <div> <img src="files/c12.jpg" /> </div>
@@ -244,8 +268,16 @@ ul li:hover ul {
 
   
 <script>
-// Responsive Carousel
-jQuery(document).ready(function(){
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  jQuery('.loader').hide();
+
+  // Responsive Carousel
   jQuery('.owl-carousel').owlCarousel({
     items: 3,
     navigation: true,
@@ -259,8 +291,8 @@ jQuery(document).ready(function(){
   });
 
   jQuery('.owl-stage-outer').insertAfter('.owl-controls');
-});
-
+  // end of responsive carousel
+}
 //awesome title
     msg = "Sofya Nagaslaeva. Front-end development: HTML, CSS, JavaScript.";
 
