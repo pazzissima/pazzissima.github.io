@@ -147,6 +147,7 @@ ul li:hover ul {
 @media (max-width: 768px) {
   .mobileOnly {
     display: block;
+    position: relative;
   }
 }
 .smll_menu {
@@ -157,21 +158,22 @@ ul li:hover ul {
     display: none;
   }
   .smll_menu {
-    display: block;
-    width: 50%;
+    display: inline-block;
     margin: 0 auto;
-  }
-  ul li ul {
-   /* width: 100%;
-    left: -1px;*/
+    width: 100%;
+    text-align: center;
   }
   ul li {
-    padding: 15px 30px;
-        margin-right: -1px;
+    padding: 15px 3%;
+    margin-right: -1px;
+    margin: 0 auto;
   }
   .rest {
     margin-top: 20%;
   }
+  .new_fonts {
+    margin: 20px 12%;
+  } 
  
 }
 .mobileOnly{
@@ -183,6 +185,9 @@ ul li:hover ul {
   width: 100%;
   max-width: 620px;
   margin: 0 auto;
+}
+.loader {
+  position: relative;
 }
 
  </style>
