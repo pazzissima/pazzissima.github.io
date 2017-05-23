@@ -5,7 +5,10 @@
   <link rel="stylesheet" style="text/css" href="portfolio.css">
   <link rel="shortcut icon" type="image/x-icon" href="files/icon.ico" />
   <script src="js/app.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
   <script src="js/bootstrap.min.js"></script>
+  
 </head>
 <body>
   <div class="navigation_bar">
@@ -23,7 +26,7 @@
     <h1><center>My Projects</center></h1>
     <ol>
 
-      <li>
+      <li class="oneProject">
         <a href="projects/fall_leaves/index.html" target="_blank">Fall Leaves</a><br>
         <a href="projects/fall_leaves/index.html" target="_blank">
           <figure><img src="projects/fall_leaves/images/leaves_project.jpg" alt="Fall Leaves" title="Fall Leaves"></figure>
@@ -32,7 +35,7 @@
       </li><br>
 
 
-      <li>
+      <li class="oneProject">
         <a href="http://lovejunkiesthemusical.com" target="_blank">Website for the musical I am in</a><br>
         <a href="http://lovejunkiesthemusical.com" target="_blank">
           <figure><img src="files/lg.jpg" alt="Love Junkies the Musical" title="Love Junkies the Musical"></figure>
@@ -40,7 +43,7 @@
         <p>This is my most recent work. I built the official website for a Broadway-style musical using HTML5, CSS3, JavaScript and jQuery.
       </li><br>
 
-      <li>
+      <li class="oneProject">
         <a href="http://serene-peak-4670.herokuapp.com/" target="_blank">Tarot Cards</a><br>
         <a href="http://serene-peak-4670.herokuapp.com/" target="_blank">
           <figure><img src="files/tarot.jpg" alt="Tarot Cards App" title="Tarot Cards App"></figure>
@@ -52,7 +55,7 @@
         <img src="files/audiofile.jpg" style="float: right; margin:0 70px 0 20px;">
         <p>This project uses a variety of technologies such as Rails, Paperclip, S3, MediaStream, Sunspot etc. It allows users to upload, share, and upvote audio, create snippets of soundclips, search for user content, make playlists and view a map of user activity worldwide.
       </li><br/> -->
-      <li>
+      <li class="oneProject">
         <a href="https://github.com/pazzissima/final_project" target="_blank">Better News</a><br>
           <figure><img src="files/better_news.jpg"></figure>
         <p>This is a "Better Facebook" application. It allows users to login fith the Facebook account, see all the news feed from Facebook and sort it by the type of content. It also lets users upload and store images that are visible to all the 'Better News' users but don't get published on Facebook itself. Technologies I used include Ruby on Rails, AngularJS, Sidekiq, Redis, S3, Paperclip, etc.
@@ -71,4 +74,15 @@
     }
     scrollMSG();
   </script>
+
+
+  <script>
+    jQuery(document).ready(function() {
+      $('.oneProject').hover(function() {
+        console.log('hey!')
+      });
+    });
+  </script>
 </body>
+
+
