@@ -60,7 +60,7 @@
     </ol>
   </div>
   <script>
-    msg = "Sofya Nagaslaeva. Front-end development: HTML, CSS, JavaScript.";
+    let msg = "Sofya Nagaslaeva. Front-end development: HTML, CSS, JavaScript.";
 
     msg = "..." + msg;pos = 0;
     function scrollMSG() {
@@ -70,6 +70,22 @@
     window.setTimeout("scrollMSG()",200);
     }
     scrollMSG();
+
+    function createHeart() {
+      let heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+      heart.innerText = '💜';
+      document.body.appendChild(heart);  
+        
+      setTimeout(()=> {
+        heart.remove(); 
+      }, 5000);
+    }
+
+    let i = setInterval(createHeart, 100);
+    setTimeout(function( ) { clearInterval( i ); }, 3000);
   </script>
 
 </body>
