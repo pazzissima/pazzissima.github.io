@@ -15,6 +15,7 @@ body{
   top: 0;
   left: 0;
   width: 100vw;
+  z-index: 5;
 }
 .navigation_bar ul{
   list-style-type:none;
@@ -101,7 +102,7 @@ a[title]:hover:after {
 .portfolio ol li img {
   width: 150px;
   height: 96px;
-  margin-top: 23px;
+  margin-top: 20px;
   box-shadow: 3px 5px 10px rgb(0 0 0 / 30%);
 }
 .portfolio figure img{
@@ -131,8 +132,5 @@ a[title]:hover:after {
 @media only screen and (min-width: 768px) {
   .navigation_bar ul{
     height: 50px;
-  }
-  .portfolio ol li img {
-    margin-top: 15px;
   }
 }

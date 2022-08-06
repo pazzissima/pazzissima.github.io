@@ -9,9 +9,11 @@
 <style>
 body{
   background-color: #D93240;
+  width: 100%;
+  height: 100vh;
 }
 .copy{
-  margin: 20px auto;
+  margin: 100px auto 0;
   width: 212px;
 }
 .floatL{
@@ -21,13 +23,84 @@ body{
   float: right;
 }
 .images{
-  margin: 0 60px;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-areas: 
+    "one one"
+    "two three"
+    "four four"
+    "five six"
+    "seven seven";
+}
+.elm1 {
+  grid-area: one;
+}
+.elm2 {
+  grid-area: two;
+}
+.elm3 {
+  grid-area: three;
+  align-self: center;
+}
+.elm4 {
+  grid-area: four;
+}
+.elm5 {
+  grid-area: five;
+  align-self: center;
+}
+.elm6 {
+  grid-area: six;
+}
+.elm7 {
+  grid-area: seven;
 }
 .images img{
   display: block;
+  max-width:49%;
+  margin: 30px auto;
+  box-shadow: 3px 5px 10px rgb(0 0 0 / 30%);
+  border-radius: 5px;
+}
+.elm5 img{
+  max-width:78%;
 }
 .elm {
  position: relative;
+}
+.navigation_bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 5;
+}
+.navigation_bar ul{
+  list-style-type:none;
+  margin:0;
+  background-color: #7F1734;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 80px;
+  align-items: center;
+  padding: 0;
+}
+
+.navigation_bar ul li a { 
+  text-decoration: none; 
+  padding: .2em 1em; 
+  color: white; 
+  font: bold 15px sans-serif;
+  font-size: 16px;
+  }
+.navigation_bar ul li a:hover{
+  color: #DA70D6;
+} 
+@media only screen and (min-width: 768px) {
+  .navigation_bar ul{
+    height: 50px;
+  }
 }
 </style>
 
@@ -35,6 +108,15 @@ body{
 
 
     <div class="copy">
+      <div class="navigation_bar">
+        <ul>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+       <li><a href="files/Resume_fr.pdf">Resume</a></li>
+        <li><a href="https://github.com/pazzissima">Github</a></li>
+        <li><a href="http://linkedin.com/in/sofianagaslaeva/">LinkedIn</a></li>
+        </ul>  
+      </div>
       <p>
         THIS PAGE IS IN PROGRESS
       </p>
@@ -42,32 +124,32 @@ body{
     </div>
 
     <div class="images">
-      <div class="elm floatL">
-        <img src="files/t1.jpg" style="width: 300px"/>
+      <div class="elm elm1">
+        <img src="files/t2.jpg"/>
       </div>
 
-      <div class="elm floatR">
-        <img src="files/t2.jpg" style="width: 387px; margin-top: 234px"/>
+      <div class="elm elm2">
+        <img src="files/t1.jpg"/>
       </div>
 
-      <div class="elm floatL">
-        <img src="files/t3.jpg" style="width: 350px; margin-top: 488px; margin-left: -234px;"/>
+      <div class="elm elm3">
+        <img src="files/t3.jpg"/>
       </div>
 
-      <div class="elm floatR">
-        <img src="files/t6.jpg" style="width: 348px; margin-top: 161px; margin-right: 3px;"/>
+      <div class="elm elm4">
+        <img src="files/t4.jpg"/>
       </div>
 
-      <div class="elm floatL">
-        <img src="files/t7.jpg" style="width: 410px; margin-top: 187px; margin-left: 0px;"/>
+      <div class="elm elm5">
+        <img src="files/t7.jpg"/>
       </div>
 
-      <div class="elm floatR">
-        <img src="files/t4.jpg" style="width: 400px; margin-top: 161px; margin-right: -17px;"/>
+      <div class="elm elm6">
+        <img src="files/t6.jpg"/>
       </div>
 
-      <div class="elm floatL">
-        <img src="files/t5.jpg" style="width: 450px; margin-top: 214px; margin-left: 0px;"/>
+      <div class="elm elm7">
+        <img src="files/t5.jpg"/>
       </div>
     </div>
 

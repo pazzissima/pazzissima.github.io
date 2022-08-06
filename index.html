@@ -84,20 +84,14 @@ ul li ul {
   padding: 0;
   position: absolute;
   top: 47px;
-/*  top: 48px;*/
   left: 0%;
   width: 154px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transiton: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -ms-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  -transition: opacity 0.2s;
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
 }
 ul li ul li { 
   background: rgba(75,0,130,0.7); 
@@ -107,9 +101,10 @@ ul li ul li {
 }
 ul li ul li:hover { background: rgb(75,0,130); }
 ul li:hover ul {
-  display: block;
+  /* display: block;
   opacity: 1;
-  visibility: visible;
+  visibility: visible; */
+  max-height: 400px;
 }
 
 @font-face {
