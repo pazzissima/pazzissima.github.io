@@ -52,6 +52,9 @@ body{
   font-family: Helvetica, serif;
   box-shadow: 3px 5px 10px rgb(0 0 0 / 30%);
 }
+.oneProject a {
+  font-family: fantasy, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 a:hover{
   color: red;
@@ -80,19 +83,6 @@ a[title]:hover:after {
   background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
 }
-
-@media (max-width: 860px) {
-  p{
-    width: 60%;
-  }
-}
-
-@media (max-width: 660px) {
-  p{
-    width: 50%;
-  }
-}
-
 .portfolio .oneProject {
   display: grid;
   grid-template-columns: 2fr 1fr;
